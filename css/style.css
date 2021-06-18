@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import './utilities.css';
 @import './variables.css';
 
@@ -7,6 +8,7 @@
     margin: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,7 +17,7 @@ body {
     background: var(--primary);
 }
 
-header {
+.hero-header {
     background: linear-gradient(135deg, rgba(0,0,0,1), rgba(0,0,0,0.2)),
     url('../img/sunrise.jpg'); 
     min-height: 100vh;
@@ -28,11 +30,18 @@ header nav {
     grid-template-columns: 1fr 2fr;
     align-items: center;
     border-bottom: 1px solid var(--gray);
+    background: var(--dark);
 }
 
 header nav div a img {
     height:50px;
     width: 200px;
+}
+
+header nav .brand a {
+    text-decoration: none;
+    color: var(--pure);
+    font-family: 'Audiowide';
 }
 
 header nav .nav-right {
@@ -182,6 +191,7 @@ section.strip {
     background: var(--dark);
     padding: 50px, 0;
     height: 85px;
+    border-bottom: 2px solid var(--gray);
 }
 
 section.strip {
@@ -366,12 +376,12 @@ section.rocket .rocket-body span:nth-child(2):after {
 }
 
 section.rocket .rocket-body span:nth-child(3):after {
-    bottom: 550px;
+    bottom: 525px;
     right: 92%;
 }
 
 section.rocket .rocket-body span:nth-child(3):before {
-    bottom: 260px;
+    bottom: 285px;
     left: 50%;
 }
 
@@ -465,4 +475,54 @@ footer ul li a:hover {
 
 footer .footer-socials a:hover {
     color: var(--pure);
+}
+
+footer .container .copyright a {
+    text-decoration: none;
+    color: var(--pure);
+    font-family: 'Audiowide';
+}
+
+section.project-cards {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 var(--dark);
+    transition: 0.3s;
+    margin-bottom: 150px;
+    max-width: 500px;
+    max-height: 600px;
+}
+
+.card img {
+    max-width: 500px;
+    height: 450px;
+}
+
+.project-cards a{
+    color: var(--pure);
+    text-decoration: none;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 var(--pure);
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid var(--dark);
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
